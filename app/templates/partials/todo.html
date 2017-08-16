@@ -1,0 +1,42 @@
+
+<div class="todo">
+    <div id="js-div" class="todo__header">
+        <h2>TODO application</h2>
+        <div class="todo__input">
+            <form>
+                <input type="text" id="js-input" class="todo__name" placeholder="Task name...">
+                <textarea type="text" id="js-textarea" placeholder="Task description..." class="todo__description" rows="5" cols=""></textarea>
+            </form>
+            
+        </div>
+        
+        <button type="button" onclick="newElement()" class="todo__btn">Add task</button>
+    </div>
+    <div class="task">
+        <div class="task__header">
+            <button type="button" class="task__number js-number">№</button>
+            <button type="button" class="task__name js-name-des">Task name/Task description</button>
+        </div>
+        <ul id="js-ul">
+            <li class="js-task">
+                <ul>
+                    <li class="js-name checked">JS</li>
+                    <li class="js-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolor sapiente illo atque quaerat aspernatur cumque deserunt aliquam! Animi ex quae illo quos eius debitis. Fugiat libero, illo aspernatur omnis.</li>
+                </ul>
+            </li>
+            <li class="js-task">
+                <ul>
+                    <li class="js-name">Angular</li>
+                    <li class="js-des" style="display: none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quasi deleniti eligendi facere, porro architecto ratione tempora asperiores, sint quo, et. Dolor quae eius perspiciatis. Maxime eveniet natus adipisci iusto ex iure eaque minima asperiores, fugit unde animi atque doloremque.</li>
+                </ul>
+            </li>
+            <li class="js-task">
+                <ul>
+                    <li class="js-name">HTML</li>
+                    <li class="js-des" style="display: none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores rem ab molestias a assumenda incidunt quo. Quaerat illum, quia quibusdam.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+</div>

@@ -1,0 +1,115 @@
+.todo
+
+    &__header 
+        background-color: #f44336
+        padding: 3rem 4rem
+        color: white
+        text-align: center
+
+        &:after 
+            content: ""
+            display: table
+            clear: both
+
+        h2 
+            font-size: 3rem
+
+    &__input 
+        width: 75%
+        float: left
+        font-size: 1.6rem
+    
+    &__name
+        width: 100%
+        padding: 1rem
+        margin-bottom: 2rem
+
+    &__description
+        width: 100%
+        max-width: 100%
+        min-width: 100%
+        padding: 1rem
+
+    &__btn
+        padding: 1rem
+        width: 25%
+        background: #d9d9d9
+        color: #555
+        float: left
+        text-align: center
+        font-size: 1.6rem
+        cursor: pointer
+        transition: 0.3s
+        
+    .task
+        margin: 0 4rem
+        border: .1rem solid #555
+
+        &__header 
+            font-size: 2rem
+            height: 4rem
+            line-height: 4rem
+            border-bottom: .1rem solid #555
+        &__number
+            height: 100%
+            float: left
+            text-align: center
+            display: inline-block
+            width: 4rem
+            border-right: .1rem solid #555
+
+        &__name 
+            height: 100%
+            display: inline-block
+            float: left
+
+    ul
+        margin: 0
+        padding: 0
+        list-style: none
+
+        li.js-name, li.js-des 
+            cursor: pointer
+            position: relative
+            padding: 1.2rem .8rem 1.2rem 4rem
+            font-size: 1.8rem
+            transition: 0.2s
+            user-select: none
+
+            &:hover 
+                background: #dddddd
+
+            &.checked 
+                background: #888
+                color: #ffffff
+        li.js-des
+            background-color: #6c6c6c
+            color: #fff
+            &:hover
+                 background-color: #6c6c6c
+
+
+    /* Style the close button */
+    .close 
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        padding: 1.2rem 1.6rem 1.2rem 1.6rem
+
+        &:hover 
+            background-color: #f44336
+            color: white
+
+    .number
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        padding: 1.2rem 1.6rem 1.2rem 1.6rem
+
+ul
+    li.js-task 
+        background-color: #eee
+        &:nth-child(odd)
+            background-color: #d3d3d3
