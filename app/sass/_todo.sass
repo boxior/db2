@@ -41,9 +41,11 @@
         cursor: pointer
         transition: 0.3s
         
-    .task
+    &__task
         margin: 0 4rem
         border: .1rem solid #555
+
+    .task
 
         &__header 
             font-size: 2rem
@@ -58,36 +60,35 @@
             width: 4rem
             border-right: .1rem solid #555
 
-        &__name 
+        &__name-des 
             height: 100%
             display: inline-block
             float: left
 
-    ul
-        margin: 0
-        padding: 0
-        list-style: none
+        &__item
+            background-color: #eee
+            &:nth-child(odd)
+                background-color: #d3d3d3
 
-        li.js-name, li.js-des 
+        &__name, &__des
             cursor: pointer
             position: relative
             padding: 1.2rem .8rem 1.2rem 4rem
             font-size: 1.8rem
             transition: 0.2s
             user-select: none
-
             &:hover 
                 background: #dddddd
 
             &.checked 
                 background: #888
                 color: #ffffff
-        li.js-des
-            background-color: #6c6c6c
-            color: #fff
-            &:hover
-                 background-color: #6c6c6c
 
+            &__des 
+                background-color: #6c6c6c
+                color: #fff
+                &:hover
+                    background-color: #6c6c6c
 
     /* Style the close button */
     .close 
@@ -107,9 +108,3 @@
         top: 50%
         transform: translateY(-50%)
         padding: 1.2rem 1.6rem 1.2rem 1.6rem
-
-ul
-    li.js-task 
-        background-color: #eee
-        &:nth-child(odd)
-            background-color: #d3d3d3

@@ -2589,6 +2589,11 @@ div, button, input, textarea, ul, li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 button:hover {
   cursor: pointer;
   background-color: #bbb; }
@@ -2631,50 +2636,50 @@ button:hover {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; }
-  .todo .task {
+  .todo__task {
     margin: 0 4rem;
     border: .1rem solid #555; }
-    .todo .task__header {
-      font-size: 2rem;
-      height: 4rem;
-      line-height: 4rem;
-      border-bottom: .1rem solid #555; }
-    .todo .task__number {
-      height: 100%;
-      float: left;
-      text-align: center;
-      display: inline-block;
-      width: 4rem;
-      border-right: .1rem solid #555; }
-    .todo .task__name {
-      height: 100%;
-      display: inline-block;
-      float: left; }
-  .todo ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    .todo ul li.js-name, .todo ul li.js-des {
-      cursor: pointer;
-      position: relative;
-      padding: 1.2rem .8rem 1.2rem 4rem;
-      font-size: 1.8rem;
-      -webkit-transition: 0.2s;
-      -o-transition: 0.2s;
-      transition: 0.2s;
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none; }
-      .todo ul li.js-name:hover, .todo ul li.js-des:hover {
-        background: #dddddd; }
-      .todo ul li.js-name.checked, .todo ul li.js-des.checked {
-        background: #888;
-        color: #ffffff; }
-    .todo ul li.js-des {
+  .todo .task__header {
+    font-size: 2rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-bottom: .1rem solid #555; }
+  .todo .task__number {
+    height: 100%;
+    float: left;
+    text-align: center;
+    display: inline-block;
+    width: 4rem;
+    border-right: .1rem solid #555; }
+  .todo .task__name-des {
+    height: 100%;
+    display: inline-block;
+    float: left; }
+  .todo .task__item {
+    background-color: #eee; }
+    .todo .task__item:nth-child(odd) {
+      background-color: #d3d3d3; }
+  .todo .task__name, .todo .task__des {
+    cursor: pointer;
+    position: relative;
+    padding: 1.2rem .8rem 1.2rem 4rem;
+    font-size: 1.8rem;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .todo .task__name:hover, .todo .task__des:hover {
+      background: #dddddd; }
+    .todo .task__name.checked, .todo .task__des.checked {
+      background: #888;
+      color: #ffffff; }
+    .todo .task__name__des, .todo .task__des__des {
       background-color: #6c6c6c;
       color: #fff; }
-      .todo ul li.js-des:hover {
+      .todo .task__name__des:hover, .todo .task__des__des:hover {
         background-color: #6c6c6c; }
   .todo .close {
     position: absolute;
@@ -2695,11 +2700,6 @@ button:hover {
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     padding: 1.2rem 1.6rem 1.2rem 1.6rem; }
-
-ul li.js-task {
-  background-color: #eee; }
-  ul li.js-task:nth-child(odd) {
-    background-color: #d3d3d3; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
