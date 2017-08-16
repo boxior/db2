@@ -7,6 +7,7 @@
         var myItemList = document.getElementsByClassName("js-task");
          var removeTag, removeIcon, numberTag, numberCount, taskNumber, taskName;
         for (var i = 0; i < myNodelist.length; i++) {
+            
                 removeTag = document.createElement("span");
                 removeIcon = document.createTextNode("\u00D7");
                 removeTag.className = "close";
