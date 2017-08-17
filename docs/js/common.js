@@ -22,15 +22,6 @@
         }
     });
     }
-    
-    // Checking elements for a class
-    function hasClassEl(el, className){
-        if (el.classList) {
-            return el.classList.contains(className);
-        } else {
-            return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
-        }
-    }
 
      // Create a "close" button, "number" and data-attr of Name and Number and append it to each list item
     function addIconsData(){
@@ -40,29 +31,29 @@
 
         for (var i = 0; i < myNodelist.length; i++) {
             
-                removeTag = document.createElement("span");
-                removeIcon = document.createTextNode("\u00D7");
-                removeTag.className = "close";
-                removeTag.appendChild(removeIcon);
+            removeTag = document.createElement("span");
+            removeIcon = document.createTextNode("\u00D7");
+            removeTag.className = "close";
+            removeTag.appendChild(removeIcon);
 
-                if ($(myNodelist[i]).find('.close')) {
-                    $(myNodelist[i]).find('.close').remove();
-                }
-                myNodelist[i].appendChild(removeTag);
+            if ($(myNodelist[i]).find('.close')) {
+                $(myNodelist[i]).find('.close').remove();
+            }
+            myNodelist[i].appendChild(removeTag);
 
-                numberTag = document.createElement("span");
-                numberCount = document.createTextNode(i+1);
-                numberTag.className = 'number';
-                numberTag.appendChild(numberCount);
-                if ($(myNodelist[i]).find('.number')) {
-                    $(myNodelist[i]).find('.number').remove();
-                }
-                myNodelist[i].appendChild(numberTag);
+            numberTag = document.createElement("span");
+            numberCount = document.createTextNode(i+1);
+            numberTag.className = 'number';
+            numberTag.appendChild(numberCount);
+            if ($(myNodelist[i]).find('.number')) {
+                $(myNodelist[i]).find('.number').remove();
+            }
+            myNodelist[i].appendChild(numberTag);
 
-                taskNumber = myNodelist[i].children[1].innerText;
-                myItemList[i].setAttribute('data-number', taskNumber);
-                taskName = myNodelist[i].childNodes[0].textContent;
-                myItemList[i].setAttribute('data-name', taskName);
+            taskNumber = myNodelist[i].children[1].innerText;
+            myItemList[i].setAttribute('data-number', taskNumber);
+            taskName = myNodelist[i].childNodes[0].textContent;
+            myItemList[i].setAttribute('data-name', taskName);
         }
     }
     
@@ -76,6 +67,7 @@
                 console.log($('.task__item'));
             }
         }
+        
     }
     
     // Create a new list item when clicking on the "Add" button
@@ -125,10 +117,11 @@
 
             var $task = $('#task__items');
             var $taskChild = $('.task__item');
+            var $el = $(el.target);
 
-            if(hasClassEl(el.target,'task__number')) {
+            if($el.hasClass('task__number')) {
                 sortByNumber();
-            } else if(hasClassEl(el.target,'task__name-des')) {
+            } else if($el.hasClass('task__name-des')) {
                 sortByName();
             }
 
