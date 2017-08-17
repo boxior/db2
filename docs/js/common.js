@@ -5,7 +5,7 @@
      function addIconsData(){
         var myNodelist = document.getElementsByClassName("task__name");
         var myItemList = document.getElementsByClassName("task__item");
-         var removeTag, removeIcon, numberTag, numberCount, taskNumber, taskName;
+        var removeTag, removeIcon, numberTag, numberCount, taskNumber, taskName;
         for (var i = 0; i < myNodelist.length; i++) {
             
                 removeTag = document.createElement("span");
@@ -14,7 +14,6 @@
                 removeTag.appendChild(removeIcon);
                 myNodelist[i].appendChild(removeTag);
 
-               
                 numberTag = document.createElement("span");
                 numberCount = document.createTextNode(i+1);
                 // var domListNumber = document.getElementsByClassName("task__name");
@@ -100,7 +99,7 @@
            
         }
 
-        var $task = $('.task__items'),
+        var $task = $('#task__items'),
         $taskChild = $task.children('.task__item');
 
         if($(el.target).hasClass('task__number')) {
