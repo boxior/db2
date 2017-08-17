@@ -2596,7 +2596,7 @@ ul {
 
 button:hover {
   cursor: pointer;
-  background-color: #bbb; }
+  background-color: #acacac; }
 
 .todo {
   /* Style the close button */ }
@@ -2652,17 +2652,21 @@ button:hover {
     width: 4rem;
     padding: 0;
     border-right: .1rem solid #555;
-    background: #bbb url("../img/sort.svg") no-repeat right center;
+    background: #d9d9d9 url("../img/sort.svg") no-repeat right center;
     -webkit-background-size: 1.6rem 1.6rem;
             background-size: 1.6rem; }
+    .todo .task__number:hover {
+      background-color: #acacac; }
   .todo .task__name-des {
     height: 100%;
     display: inline-block;
     float: left;
     padding-right: 2rem;
-    background: #bbb url("../img/sort.svg") no-repeat right center;
+    background: #d9d9d9 url("../img/sort.svg") no-repeat right center;
     -webkit-background-size: 1.6rem 1.6rem;
             background-size: 1.6rem; }
+    .todo .task__name-des:hover {
+      background-color: #acacac; }
   .todo .task__item {
     background-color: #eee; }
     .todo .task__item:nth-child(odd) {
@@ -2680,15 +2684,15 @@ button:hover {
         -ms-user-select: none;
             user-select: none; }
     .todo .task__name:hover, .todo .task__des:hover {
-      background: #dddddd; }
+      background-color: #6c6c6c; }
     .todo .task__name.checked, .todo .task__des.checked {
       background: #888;
       color: #ffffff; }
-    .todo .task__name__des, .todo .task__des__des {
-      background-color: #6c6c6c;
-      color: #fff; }
-      .todo .task__name__des:hover, .todo .task__des__des:hover {
+      .todo .task__name.checked:hover, .todo .task__des.checked:hover {
         background-color: #6c6c6c; }
+  .todo .task__des {
+    background-color: #a0a0a0;
+    color: #fff; }
   .todo .close {
     position: absolute;
     right: 0;
