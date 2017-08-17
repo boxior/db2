@@ -2647,14 +2647,22 @@ button:hover {
   .todo .task__number {
     height: 100%;
     float: left;
-    text-align: center;
+    text-align: left;
     display: inline-block;
     width: 4rem;
-    border-right: .1rem solid #555; }
+    padding: 0;
+    border-right: .1rem solid #555;
+    background: #bbb url("../img/sort.svg") no-repeat right center;
+    -webkit-background-size: 1.6rem 1.6rem;
+            background-size: 1.6rem; }
   .todo .task__name-des {
     height: 100%;
     display: inline-block;
-    float: left; }
+    float: left;
+    padding-right: 2rem;
+    background: #bbb url("../img/sort.svg") no-repeat right center;
+    -webkit-background-size: 1.6rem 1.6rem;
+            background-size: 1.6rem; }
   .todo .task__item {
     background-color: #eee; }
     .todo .task__item:nth-child(odd) {
@@ -2662,7 +2670,7 @@ button:hover {
   .todo .task__name, .todo .task__des {
     cursor: pointer;
     position: relative;
-    padding: 1.2rem .8rem 1.2rem 4rem;
+    padding: 1.2rem .8rem 1.2rem 4.6rem;
     font-size: 1.8rem;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
@@ -2699,7 +2707,8 @@ button:hover {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    padding: 1.2rem 1.6rem 1.2rem 1.6rem; }
+    padding: 1.2rem 1.45rem 1.2rem 1.45rem;
+    border-right: .1rem solid #555; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
