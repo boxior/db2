@@ -1,2 +1,2 @@
 "# db2" 
-https://boxior.github.io/db2/
+https://boxior.github.io/test-db2/
