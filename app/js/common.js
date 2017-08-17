@@ -4,12 +4,12 @@
         // init for default tasks
         addIconsData();
         taskClose();
-        acordion();
+        accordion();
         sortInit();
     })();
 
     // Acordion effect of Description Task
-    function acordion(){
+    function accordion(){
         $(document).on('click', function(el){
         if($(el.target).hasClass('task__name')) {
             el.target.classList.toggle('checked');
@@ -118,9 +118,11 @@
     }
     
     // Sort function
+     
     function sortInit() {
-        document.getElementsByClassName('task__header')[0].onclick = function(el){
-            
+
+        $(document).on('click', function(el) {
+
             var $task = $('#task__items');
             var $taskChild = $('.task__item');
 
@@ -177,20 +179,20 @@
                 }
                                 
                 $taskChild.sort(function(a,b){
-                    var aNum, bNum;
+                    var aName, bName;
 
                     if (isSortName) {
-                        aNum = a.getAttribute('data-name'),
-                        bNum = b.getAttribute('data-name');
+                        aName = a.getAttribute('data-name'),
+                        bName = b.getAttribute('data-name');
                     } else {
-                        bNum = a.getAttribute('data-name'),
-                        aNum = b.getAttribute('data-name');
+                        bName = a.getAttribute('data-name'),
+                        aName = b.getAttribute('data-name');
                     }
 
-                    if(aNum > bNum ) {
+                    if(aName > bName ) {
                         return 1;
                     }
-                    if(aNum < bNum ) {
+                    if(aName < bName ) {
                         return -1;
                     }
                     return 0;
@@ -198,5 +200,5 @@
                 $taskChild.detach().appendTo($task);
                 console.log($('.task__item'));
             }
-        }
+        });
     }
